@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boardroom Booking System</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Boardroom Booking System</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="profile.php">Profile</a></li>
+      <li><a href="review.php">Reviews</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Booked Boardroom and Equipment</h2>
+    <table>
+        <tr>
+          <th>Time</th>
+          <th>Equipment</th>
+          <th>Event</th>
+          <th>Equipment Left</th>
+        </tr>
+        <?php
+          // Retrieve booking data from the database or another data source
+          // Loop through the booking data to generate rows in the table
+          foreach ($bookings as $booking) {
+            echo "<tr>";
+            echo "<td>" . $booking['time'] . "</td>";
+            echo "<td>" . $booking['equipment'] . "</td>";
+            echo "<td>" . $booking['event'] . "</td>";
+            echo "<td>" . $booking['equipment_left'] . "</td>";
+            echo "</tr>";
+          }
+        ?>
+      </table>
+    <!-- Display available boardrooms here -->
+    <h2>Equipment Available</h2>
+    
+    <h2>Make a Booking</h2>
+    <!-- Booking form goes here -->
+  </main>
+  
+  <footer>
+    <p>© <?php echo date("Y"); ?> Boardroom Booking System. All rights reserved.</p>
+  </footer>
+</body>
+</html>
