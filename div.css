@@ -1,0 +1,17 @@
+.div-container {
+    background-color:#1877F2;
+    border-radius:5px;
+    height: 10px;
+  }
+  .div-container1 {
+    background-color:#e91e63;
+    border-radius:10px;
+    height: 20px;
+    width:75%;
+  }
+  .div-container2 {
+    background-color:#FFCE26;
+    border-radius:12.5px;
+    height: 25px;
+    width:50%;
+  }
